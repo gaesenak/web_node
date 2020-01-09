@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>개새낙 월드</title>
+</head>
+<body>
+    <h1>익명게시판 작성</h1>
+    <form action="/board/save" method="POST">
+    <table>
+        <tr>
+            <th>제목</th>
+            <td><input type="text" id="title" name="title"/></td>
+        </tr>
+        <tr>
+            <th>내용</th>
+            <td><textarea type="textarea" id="content" name="content"></textarea></td>
+        </tr>
+    </table>
+    <button type="submit">저장</button>
+    </form>
+</body>
+</html>
