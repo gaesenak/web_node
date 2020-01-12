@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>개새낙 월드</title>
+</head>
+<body style="background-image: url('../images/bono.jpeg')">
+    <h1>익명 게시판</h1>
+    <table>
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>날짜</th>
+            <th>조회수</th>
+        </tr>
+<% for(var i=0; i<result.length; i++) { %>
+        <tr>
+            <td><%= result[i].bno %></td>
+            <td><a href="/board/detail?bno=<%= result[i].bno %>"><%= result[i].title %></a></td>
+            <td><%= result[i].cDate %></td>
+            <td><%= result[i].view_cnt %></td>
+        </tr>
+<% } %>
+
+    </table>
+</body>
+</html>

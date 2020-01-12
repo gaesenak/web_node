@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+app.engine('html', require('ejs').renderFile);
 
 var router = require('./routes/main')(app);
 

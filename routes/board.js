@@ -31,4 +31,18 @@ router.post('/save', function(req, res){
     });
 })
 
+router.get('/list', function(req, res) {
+    console.log('list');
+    var stmt = 'select bno, title, date_format(create_date, "%y/%c/%e") as cDate, view_cnt from board order by bno desc';
+		connection.query(stmt, function (err, result) {
+            if(!err) {
+                //console.log(result);
+                res.render('board/list', {result: result});
+            } else {
+                console.log(err);
+                console.log(result);
+            }
+        });
+});
+
 module.exports = router;
